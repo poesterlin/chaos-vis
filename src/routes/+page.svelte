@@ -5,7 +5,6 @@
 	let data: Float32Array = new Float32Array();
 	let shiftBetweenDimensions = 400;
 	let maxElements = 7000;
-	let startIdx = 40000;
 	let stepSize = 3;
 	let running = false;
 
@@ -37,14 +36,11 @@
 		<label for="maxElements">Max Elements ({maxElements})</label>
 		<input type="range" id="maxElements" bind:value={maxElements} min="10" max="10000" />
 
-		<label for="startIdx">Start Index ({startIdx})</label>
-		<input type="range" id="startIdx" bind:value={startIdx} min="0" max={data.length} />
-
 		<label for="stepSize">Step Size ({stepSize})</label>
 		<input type="range" id="stepSize" bind:value={stepSize} min="1" max="10" />
 	</div>
 
-	<App {data} {maxElements} {shiftBetweenDimensions} {startIdx} {stepSize} />
+	<App {data} {maxElements} {shiftBetweenDimensions} {stepSize} />
 </div>
 
 <style>
